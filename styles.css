@@ -1,0 +1,31 @@
+.column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.box{
+    text-align: center;
+}
+
+.custom {
+    float: none;
+}
+
+.col-3 {
+    text-align: center;
+}
+
+.bg-primary-custom {
+    background-color: #007bff;
+}
+
+.red{
+    background-color: red;
+}

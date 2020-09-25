@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src = "practice.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="alert alert-info" role="alert">
+            This is a weather app, input a city and press the button. <a href="https://github.com/albertoe22" target="_blank" rel="noopener noreferrer" class="alert-link">
+                Click here to reach my github!</a> 
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div style= "height: 40px">
+                
+        </div>
+        <div class= container-fluid>
+            <div class = "row">
+                <div class = "col-3  ">
+                    <div id = "tCard" class="card text-white bg-primary-custom mb-3" style="height: 15rem">
+                        <div class="card-header text-dark">Temperature</div>
+                        <div class="card-body">
+                          <h5 class="card-title text-dark" id = "output" style = "font-size: 40px">0&deg</h5>
+                          <p class= "card-text text-dark" ></p>
+                        </div>
+                      </div>
+                </div>
+                <div class = "col-3">
+                    <div class="card text-white bg-primary-custom mb-3" style="height: 15rem">
+                        <div class="card-header text-dark">Humidity</div>
+                        <div class="card-body">
+                          <h5 class="card-title text-dark" id = "humidity" style = "font-size: 40px">0%</h5>
+                          <p class= "card-text text-dark" ></p>
+                        </div>
+                      </div>
+                </div>
+                <div class = "col-3">
+                    <div id = "aCard" class="card text-white bg-primary-custom mb-3" style="height: 15rem">
+                        <div class="card-header text-dark">Air Quality Index</div>
+                        <div class="card-body">
+                          <h5 class="card-title text-dark" id = "aqi" style = "font-size: 40px">0</h5>
+                          <p id = "aText" class= "card-text text-dark" ></p>
+                        </div>
+                      </div>
+                </div>
+                    <div class = "col-3">
+                        <div id = "uCard" class="card text-white bg-primary-custom mb-3" style="height: 15rem">
+                            <div class="card-header text-dark">UV Index</div>
+                            <div class="card-body">
+                              <h5 class="card-title text-dark" id = "uvi" style = "font-size: 40px">0</h5>
+                              <p id = "uText" class= "card-tex text-dark" ></p>
+                            </div>
+                          </div>
+                    </div>
+            </div>
+
+            <div class = "row w-50">
+                <div class = "col mx-auto" >
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">City</span>
+                        </div>
+                        <input type = "text" class="form-control custom" id ="city" placeholder = "City" value ="London" aria-label="Username" aria-describedby="basic-addon1"></input>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class = "col">
+
+                    <button onclick = "weatherApp()" id="submit" class = "btn btn-outline-primary">
+                    Weather Output</button>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
