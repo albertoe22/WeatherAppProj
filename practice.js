@@ -36,19 +36,21 @@ function weatherApp() {
     }
     // Read json file of the url, grab data and call the other functions for DOM
     let url3 = goog + input.value + googKey;
+
+
+    
     $.getJSON(url3, function (obj3) {  
         lat = obj3.results[0].geometry.location.lat;
         lon = obj3.results[0].geometry.location.lng;
-    });
-
-    $.getJSON(url2, function(obj1){
+        });
+        $.getJSON(url2, function(obj1){
         let arr = airData(obj1);
         value = arr;
 
-        let url = api + lat + '&lon=' + lon + apiKey+units;
-        $.getJSON(url, function(obj2){
-            gotData(obj2, value);       
-        });
+            let url = api + lat + '&lon=' + lon + apiKey+units;
+            $.getJSON(url, function(obj2){
+                gotData(obj2, value);       
+            });
       });
 }
 
