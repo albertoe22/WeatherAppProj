@@ -30,6 +30,10 @@
     background-color: red;
 }
 
+.bg-info-custom {
+    background-color: #169bb2;
+}
+
 #option1 {
     margin-left:3px;
 }

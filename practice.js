@@ -57,29 +57,37 @@ function editTemp(data) {
     let temp = weather.current.temp;
     let feels = "";
     let radioButtons =document.getElementsByName("options");
+    let tCard = document.getElementById("tCard");
+    let tText = document.getElementById("tText");
     if (radioButtons[0].checked == true) {
         document.getElementById("output").innerHTML = (temp).toFixed(2) +  "0&degF ";    
         feels = weather.current.feels_like.toFixed(1) +"0&degF";
+        if (temp <= 70) {
+            tText.innerHTML = "Feels Like: " + feels;
+        }
+        else if (temp>=71 && temp<=88) {
+            tCard.style.background = "#FFBA49";
+            tText.innerHTML = "Feels Like: " + feels;
+        }
+        else {
+            tCard.style.background = "#ff3333";
+            tText.innerHTML = "Feels Like: " + feels;
+        }
     }
     else {
         document.getElementById("output").innerHTML = (temp).toFixed(2) +  "0&degC";    
         feels = weather.current.feels_like.toFixed(1) +"0&degC";
-    }
-
-    let tCard = document.getElementById("tCard");
-    let tText = document.getElementById("tText");
-
-    
-    if (temp <= 70) {
-        tText.innerHTML = "Feels Like: " + feels;
-    }
-    else if (temp>=71 && temp<=88) {
-        tCard.style.background = "#FFBA49";
-        tText.innerHTML = "Feels Like: " + feels;
-    }
-    else {
-        tCard.style.background = "#ff3333";
-        tText.innerHTML = "Feels Like: " + feels;
+        if (temp <= 21) {
+            tText.innerHTML = "Feels Like: " + feels;
+        }
+        else if (temp>=22 && temp<=31) {
+            tCard.style.background = "#FFBA49";
+            tText.innerHTML = "Feels Like: " + feels;
+        }
+        else {
+            tCard.style.background = "#ff3333";
+            tText.innerHTML = "Feels Like: " + feels;
+        }
     }
 
 }
