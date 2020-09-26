@@ -65,13 +65,14 @@ function editTemp(data) {
         document.getElementById("output").innerHTML = (temp).toFixed(2) +  "0&degF ";    
         feels = weather.current.feels_like.toFixed(1) +"0&degF";
         if (temp <= 70) {
+            tCard.style.background ="#169bb2";
             tText.innerHTML = "Feels Like: " + feels;
         }
         else if (temp>=71 && temp<=88) {
-            tCard.style.background = "#FFBA49";
+            tCard.style.background = "#FFBA49"; 
             tText.innerHTML = "Feels Like: " + feels;
         }
-        else {
+        else if (temp>88) {
             tCard.style.background = "#ff3333";
             tText.innerHTML = "Feels Like: " + feels;
         }
@@ -80,13 +81,14 @@ function editTemp(data) {
         document.getElementById("output").innerHTML = (temp).toFixed(2) +  "0&degC";    
         feels = weather.current.feels_like.toFixed(1) +"0&degC";
         if (temp <= 21) {
+            tCard.style.background ="#169bb2";
             tText.innerHTML = "Feels Like: " + feels;
         }
         else if (temp>=22 && temp<=31) {
             tCard.style.background = "#FFBA49";
             tText.innerHTML = "Feels Like: " + feels;
         }
-        else {
+        else if (temp>31) {
             tCard.style.background = "#ff3333";
             tText.innerHTML = "Feels Like: " + feels;
         }
