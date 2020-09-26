@@ -99,7 +99,7 @@ function gotData(data, value) {
     //let temp = weather.current.temp;
     let humidity = weather.current.humidity;
     let uvi =   weather.current.uvi.toFixed(0);
-    // let feels = weather.current.feels_like.toFixed(1) +"0&deg";
+    // let feels = weather.current.fe#00cc44els_like.toFixed(1) +"0&deg";
     let tCard = document.getElementById("tCard");
     let tText = document.getElementById("tText");
     let aCard = document.getElementById("aCard");
@@ -109,7 +109,7 @@ function gotData(data, value) {
 
 
     if (value <= 50) {
-        aCard.style.background = "green";
+        aCard.style.background = "#00cc44";
         aText.innerHTML = "Air quality is good";
     } 
     else if (value>=50 && value<=100) {
@@ -134,7 +134,7 @@ function gotData(data, value) {
     }
 
     if (uvi < 3 ) {
-        uCard.style.background ="green";
+        uCard.style.background ="#00cc44";
         uText.innerHTML = "No UV protection needed"
     }
     else if (uvi>=3 && uvi <=5) {
