@@ -23,61 +23,82 @@
             <div class = "row">
                 <div class = "col-3  ">
                     <div id = "tCard" class="card text-white bg-primary-custom mb-3" style="height: 15rem">
-                        <div class="card-header text-dark">Temperature</div>
+                        <div class="card-header text-dark" style = "font-size: 18px"><b>Temperature</b></div>
                         <div class="card-body">
                           <h5 class="card-title text-dark" id = "output" style = "font-size: 40px">0&deg</h5>
-                          <p class= "card-text text-dark" ></p>
+                          <p id = "tText" class= "card-text text-dark" style = "font-weight: bold;"></p>
                         </div>
                       </div>
                 </div>
                 <div class = "col-3">
                     <div class="card text-white bg-primary-custom mb-3" style="height: 15rem">
-                        <div class="card-header text-dark">Humidity</div>
+                        <div class="card-header text-dark" style = "font-size: 18px"><b>Humidity</b></div>
                         <div class="card-body">
                           <h5 class="card-title text-dark" id = "humidity" style = "font-size: 40px">0%</h5>
-                          <p class= "card-text text-dark" ></p>
+                          <p class= "card-text text-dark " style = "font-weight: bold;" ></p>
                         </div>
                       </div>
                 </div>
                 <div class = "col-3">
                     <div id = "aCard" class="card text-white bg-primary-custom mb-3" style="height: 15rem">
-                        <div class="card-header text-dark">Air Quality Index</div>
+                        <div class="card-header text-dark" style = "font-size: 18px"><b>Air Quality Index</b></div>
                         <div class="card-body">
                           <h5 class="card-title text-dark" id = "aqi" style = "font-size: 40px">0</h5>
-                          <p id = "aText" class= "card-text text-dark" ></p>
+                          <p id = "aText" class= "card-text text-dark" style = "font-weight: bold;"></p>
                         </div>
                       </div>
                 </div>
                     <div class = "col-3">
                         <div id = "uCard" class="card text-white bg-primary-custom mb-3" style="height: 15rem">
-                            <div class="card-header text-dark">UV Index</div>
+                            <div class="card-header text-dark" style = "font-size: 18px"><b>UV Index</b></div>
                             <div class="card-body">
                               <h5 class="card-title text-dark" id = "uvi" style = "font-size: 40px">0</h5>
-                              <p id = "uText" class= "card-tex text-dark" ></p>
+                              <p id = "uText" class= "card-tex text-dark" style = "font-weight: bold;" ></p>
                             </div>
                           </div>
                     </div>
             </div>
 
-            <div class = "row w-50">
-                <div class = "col mx-auto" >
-                    <div class="input-group mb-3">
+            <div class = "row justify-content-center">
+                <div class = "col-lg-4 d-flex justify-content-center" >
+                    <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">City</span>
+                            <span class="input-group-text " id="basic-addon1">City</span>
                         </div>
-                        <input type = "text" class="form-control custom" id ="city" placeholder = "City" value ="London" aria-label="Username" aria-describedby="basic-addon1"></input>
+                        <input type = "text" class="form-control custom " id ="city" placeholder = "City" value ="London" aria-label="Username" aria-describedby="basic-addon1"></input>
                     </div>
                 </div>
             </div>
 
             <div class = "row">
-                <div class = "col">
-
-                    <button onclick = "weatherApp()" id="submit" class = "btn btn-outline-primary">
+                <div class = "col d-flex justify-content-center">
+                    <button onclick = "weatherApp()" id="submit" class = "btn btn-primary">
                     Weather Output</button>
-
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                          <input  type="radio" name="options" id="option1" autocomplete="off" checked> Imperial
+                        </label>
+                        <label class="btn btn-secondary">
+                          <input type="radio" name="options" id="option2" autocomplete="off"> Metric
+                        </label>
+                      </div>
                 </div>
+
             </div>
+            <div class="pos-f-t">
+                <div class="collapse fixed-bottom" id="navbarToggleExternalContent">
+                  <div class="bg-dark p-4">
+                    <h4 class="text-white">Testing</h4>
+                    <span class="text-muted">Toggleable via the navbar brand.</span>
+                  </div>
+                </div>
+                <nav class="navbar fixed-bottom navbar-dark bg-dark">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </nav>
+              </div>
+              
         </div>
     </body>
 </html>
