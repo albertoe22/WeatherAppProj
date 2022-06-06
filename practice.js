@@ -16,7 +16,7 @@ var aqi = 'https://api.waqi.info/feed/';
 var apiKey2 = '/?token=670aa9e79239359c62a4f2aa9af74cbfd9ea730e';
 
 var goog = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
-var googKey = '&key=AIzaSyCAe_x4UaDGgmy1fcnnznlNZwJcfw7J_VU';
+var googKey = '&key=AIzaSyAxNA-KDIXLLn5BSXugcCL82e2vghcAHyI';
 
 
 
